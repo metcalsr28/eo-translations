@@ -54,6 +54,12 @@ header { text-align: center; padding: 28px 0 8px; }
 h1 { font-size: 2rem; margin: 0 0 6px; letter-spacing: -0.02em; }
 .tagline { color: var(--muted); font-size: 1.05rem; margin: 0; }
 
+.version-line { color: var(--muted); font-size: 0.85rem; margin: 8px 0 0; }
+.cl-entry { margin-bottom: 16px; }
+.cl-entry h3 { font-size: 1rem; margin: 0 0 4px; }
+.cl-entry .cl-date { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
+.cl-entry ul { margin: 0; }
+
 section { margin: 34px 0; }
 h2 { font-size: 1.15rem; margin: 0 0 12px; }
 p { margin: 0 0 14px; }

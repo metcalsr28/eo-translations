@@ -22,6 +22,7 @@
       <span class="eo">Kompleta traduko, farita rekte el la japana originalo.</span>
       <span class="en">A complete translation, made directly from the original Japanese.</span>
     </p>
+    <p class="version-line" id="version-line"></p>
   </header>
 
   <section>
@@ -95,6 +96,11 @@
     </p>
   </section>
 
+  <section id="changelog-section" hidden>
+    <h2><span class="eo">Ŝanĝoprotokolo</span><span class="en">Changelog</span></h2>
+    <div id="changelog"></div>
+  </section>
+
   <footer>
     <p>
       <span class="eo">Neoficiala projekto de fanoj. Ne rilata al Nintendo,
@@ -106,6 +112,31 @@
   </footer>
 
 </div>
+<script src="version.js"></script>
 <script src="../assets/site.js"></script>
+<script>
+(function () {
+  var d = (window.EO_VERSIONS || {})["pokemon_g1"];
+  if (!d) return;
+  function esc(s) { return String(s).replace(/[&<>]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]; }); }
+  function statusLabel(v) { return parseInt(v, 10) >= 1 ? ["Kompleta", "Complete"] : ["Provludata", "Playtesting"]; }
+  var sl = statusLabel(d.version);
+  var vl = document.getElementById("version-line");
+  if (vl) vl.innerHTML = "Versio " + esc(d.version) + " · <span class=\"eo\">" + sl[0] + "</span><span class=\"en\">" + sl[1] + "</span> · " + esc(d.date);
+  var cl = document.getElementById("changelog");
+  if (cl && d.changelog) {
+    d.changelog.forEach(function (e) {
+      var notes = e.notes.map(function (n) {
+        return "<li><span class=\"eo\">" + esc(n.eo) + "</span><span class=\"en\">" + esc(n.en) + "</span></li>";
+      }).join("");
+      var div = document.createElement("div");
+      div.className = "cl-entry";
+      div.innerHTML = "<h3>" + esc(e.version) + " <span class=\"cl-date\">" + esc(e.date) + "</span></h3><ul>" + notes + "</ul>";
+      cl.appendChild(div);
+    });
+    document.getElementById("changelog-section").hidden = false;
+  }
+})();
+</script>
 </body>
 </html>

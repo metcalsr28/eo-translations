@@ -37,8 +37,8 @@
 
       <a class="project" href="pokemon_g1/">
         <span class="go">→</span>
-        <h3>Pokémon Ruĝa &amp; Blua <span class="badge ready"><span class="eo">Elŝutebla</span><span class="en">Available</span></span></h3>
-        <p class="meta">Game Boy · 1996 · <span class="eo">tradukita el la japana</span><span class="en">translated from Japanese</span></p>
+        <h3>Pokémon Ruĝa &amp; Blua <span class="badge ready" id="pg1-badge"><span class="eo">Elŝutebla</span><span class="en">Available</span></span></h3>
+        <p class="meta">Game Boy · 1996 · <span class="eo">tradukita el la japana</span><span class="en">translated from Japanese</span><span id="pg1-version"></span></p>
       </a>
 
     </div>
@@ -60,6 +60,21 @@
   </footer>
 
 </div>
+<script src="pokemon_g1/version.js"></script>
 <script src="assets/site.js"></script>
+<script>
+(function () {
+  var d = (window.EO_VERSIONS || {})["pokemon_g1"];
+  if (!d) return;
+  var sl = parseInt(d.version, 10) >= 1 ? ["Kompleta", "Complete"] : ["Provludata", "Playtesting"];
+  var badge = document.getElementById("pg1-badge");
+  if (badge) {
+    badge.className = "badge " + (parseInt(d.version, 10) >= 1 ? "ready" : "planned");
+    badge.innerHTML = "<span class=\"eo\">" + sl[0] + "</span><span class=\"en\">" + sl[1] + "</span>";
+  }
+  var ver = document.getElementById("pg1-version");
+  if (ver) ver.textContent = " · v" + d.version;
+})();
+</script>
 </body>
 </html>
