@@ -79,7 +79,7 @@ p { margin: 0 0 14px; }
 .badge.planned { background: var(--border); color: var(--muted); }
 
 /* download cards (project pages) */
-.downloads { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; }
+.downloads { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; margin-bottom: 20px; }
 @media (max-width: 520px) { .downloads { grid-template-columns: 1fr; } }
 .card {
   border: 1px solid var(--border); background: var(--card);
