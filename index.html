@@ -3,106 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pokémon en Esperanto — Ruĝa &amp; Blua Versio</title>
-<style>
-  :root {
-    --bg: #f5f4f0;
-    --fg: #1a1a1a;
-    --muted: #6b6b6b;
-    --card: #ffffff;
-    --border: #e0ddd6;
-    --red: #c0392b;
-    --blue: #2472c0;
-    --accent: #2472c0;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #16171a;
-      --fg: #e8e6e1;
-      --muted: #9a978f;
-      --card: #1f2125;
-      --border: #33353b;
-      --red: #e05b4c;
-      --blue: #55a0e6;
-    }
-  }
-  * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body {
-    margin: 0;
-    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--fg);
-  }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
-  a { color: var(--accent); }
-
-  /* language toggle */
-  .langbar { text-align: right; padding-top: 16px; }
-  .langbar button {
-    font: inherit; font-size: 14px; cursor: pointer;
-    background: none; border: 1px solid var(--border); color: var(--muted);
-    border-radius: 6px; padding: 4px 10px; margin-left: 4px;
-  }
-  .langbar button[aria-pressed="true"] {
-    color: #fff; background: var(--accent); border-color: var(--accent);
-  }
-  body.lang-eo .en { display: none; }
-  body.lang-en .eo { display: none; }
-
-  header { text-align: center; padding: 28px 0 8px; }
-  h1 { font-size: 2rem; margin: 0 0 6px; letter-spacing: -0.02em; }
-  .tagline { color: var(--muted); font-size: 1.05rem; margin: 0; }
-  .versions {
-    display: inline-block; margin-top: 14px; font-weight: 600;
-  }
-  .versions .r { color: var(--red); }
-  .versions .b { color: var(--blue); }
-
-  section { margin: 34px 0; }
-  h2 { font-size: 1.15rem; margin: 0 0 12px; }
-  p { margin: 0 0 14px; }
-  .lead { font-size: 1.08rem; }
-
-  /* download cards */
-  .downloads { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; }
-  @media (max-width: 520px) { .downloads { grid-template-columns: 1fr; } }
-  .card {
-    border: 1px solid var(--border); background: var(--card);
-    border-radius: 12px; padding: 18px; text-align: center;
-  }
-  .card.red { border-top: 4px solid var(--red); }
-  .card.blue { border-top: 4px solid var(--blue); }
-  .card h3 { margin: 0 0 4px; font-size: 1.1rem; }
-  .card .sub { color: var(--muted); font-size: 0.85rem; margin: 0 0 14px; }
-  .dl {
-    display: inline-block; text-decoration: none; font-weight: 600;
-    color: #fff; border-radius: 8px; padding: 9px 18px;
-  }
-  .card.red .dl { background: var(--red); }
-  .card.blue .dl { background: var(--blue); }
-  .hash {
-    display: block; margin-top: 14px; font-size: 0.72rem; color: var(--muted);
-    word-break: break-all; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  }
-  .hash b { color: var(--fg); font-weight: 600; }
-
-  ol, ul { margin: 0 0 14px; padding-left: 22px; }
-  li { margin-bottom: 6px; }
-  code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-    font-size: 0.88em; background: var(--card);
-    border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px;
-  }
-  .note {
-    border-left: 3px solid var(--accent); background: var(--card);
-    padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 0 0 14px;
-  }
-  footer {
-    margin: 40px 0 30px; padding-top: 20px; border-top: 1px solid var(--border);
-    color: var(--muted); font-size: 0.82rem; text-align: center;
-  }
-</style>
+<title>Ludoj en Esperanto</title>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="lang-eo">
 <div class="wrap">
@@ -113,108 +15,51 @@
   </div>
 
   <header>
-    <h1>Pokémon en Esperanto</h1>
+    <h1>Ludoj en Esperanto</h1>
     <p class="tagline">
-      <span class="eo">Kompleta traduko, farita rekte el la japana originalo.</span>
-      <span class="en">A complete translation, made directly from the original Japanese.</span>
+      <span class="eo">Fan-tradukoj de klasikaj videoludoj, faritaj rekte el la originaloj.</span>
+      <span class="en">Fan translations of classic video games, made directly from the originals.</span>
     </p>
-    <p class="versions"><span class="r">Ruĝa Versio</span> &nbsp;·&nbsp; <span class="b">Blua Versio</span></p>
   </header>
 
   <section>
     <p class="lead">
-      <span class="eo">Ĉi tiu projekto estas alt-kvalita Esperanta traduko de
-        Pokémon Ruĝa kaj Blua Versioj por la originala Game Boy.</span>
-      <span class="en">This project is a high-quality Esperanto translation of
-        Pokémon Red and Blue Versions for the original Game Boy.</span>
-    </p>
-    <p>
-      <span class="eo">La traduko strebas al fideleco al la japana fontteksto —
-        ne nur al re-Esperantigo de la angla lokalizo. Nomoj de Pokémonoj kaj
-        roluloj sekvas la japanajn originalojn, transskribitajn laŭ Esperanta
-        ortografio.</span>
-      <span class="en">The translation aims for fidelity to the Japanese source
-        text — not merely an Esperanto rendering of the English localization.
-        Pokémon and character names follow the Japanese originals, transliterated
-        into Esperanto orthography.</span>
+      <span class="eo">Kompletaj, alt-kvalitaj Esperantaj tradukoj de retro-ludoj.
+        Ĉiu projekto estas disdonata kiel flikaĵo (patch) por ludo kiun vi mem posedas.</span>
+      <span class="en">Complete, high-quality Esperanto translations of retro games.
+        Each project is distributed as a patch for a game you already own.</span>
     </p>
   </section>
 
   <section>
-    <h2><span class="eo">Elŝutu la flikaĵojn</span><span class="en">Download the patches</span></h2>
-    <div class="downloads">
-      <div class="card red">
-        <h3>Ruĝa Versio</h3>
-        <p class="sub"><span class="eo">por Pokémon Red</span><span class="en">for Pokémon Red</span></p>
-        <a class="dl" href="pokemon-ruga-versio-esperanto.ips" download>IPS</a>
-        <span class="hash"><b>SHA-1</b> de baza ROM (Red UE):<br>ea9bcae617fdf159b045185467ae58b2e4a48b9a</span>
-      </div>
-      <div class="card blue">
-        <h3>Blua Versio</h3>
-        <p class="sub"><span class="eo">por Pokémon Blue</span><span class="en">for Pokémon Blue</span></p>
-        <a class="dl" href="pokemon-blua-versio-esperanto.ips" download>IPS</a>
-        <span class="hash"><b>SHA-1</b> de baza ROM (Blue UE):<br>d7037c83e1ae5b39bde3c30787637ba1d4c48ce2</span>
-      </div>
+    <h2><span class="eo">Projektoj</span><span class="en">Projects</span></h2>
+    <div class="projects">
+
+      <a class="project" href="pokemon_g1/">
+        <span class="go">→</span>
+        <h3>Pokémon Ruĝa &amp; Blua <span class="badge ready"><span class="eo">Elŝutebla</span><span class="en">Available</span></span></h3>
+        <p class="meta">Game Boy · 1996 · <span class="eo">tradukita el la japana</span><span class="en">translated from Japanese</span></p>
+      </a>
+
     </div>
-    <p class="note">
-      <span class="eo"><b>Ni disdonas nur la tradukan flikaĵon, ne la ludon mem.</b>
-        Vi mem devas posedi la originalan ludon kaj apliki la flikaĵon al via
-        propra ROM-dosiero. Bonvolu ne pludistribui flikitajn ROM-ojn.</span>
-      <span class="en"><b>We distribute only the translation patch, not the game
-        itself.</b> You must own the original game and apply the patch to your own
-        ROM file. Please do not redistribute patched ROMs.</span>
-    </p>
-  </section>
-
-  <section>
-    <h2><span class="eo">Kiel apliki la flikaĵon</span><span class="en">How to apply the patch</span></h2>
-    <p>
-      <span class="eo">Flikaĵo en IPS-formo estas aplikata al ROM-dosiero per
-        aparta ilo. Jen kelkaj konataj, sendependaj fliki­loj (ne rilataj al ĉi
-        tiu projekto):</span>
-      <span class="en">An IPS patch is applied to a ROM file using a separate
-        tool. Here are some well-known, independent patchers (not affiliated with
-        this project):</span>
-    </p>
-    <ul>
-      <li><a href="https://www.marcrobledo.com/RomPatcher.js/" rel="noopener noreferrer" target="_blank">ROM Patcher JS</a>
-        — <span class="eo">funkcias en la retumilo; nenio estas alŝutata.</span><span class="en">runs in your browser; nothing is uploaded.</span></li>
-      <li><a href="https://github.com/Alcaro/Flips" rel="noopener noreferrer" target="_blank">Floating IPS (Flips)</a>
-        — <span class="eo">senreta ilo por Vindozo/Linukso.</span><span class="en">offline tool for Windows/Linux.</span></li>
-    </ul>
-    <p class="note">
-      <span class="eo">IPS ne kontrolas la bazan ROM-on. Kontrolu vian dosieron
-        per <code>sha1sum</code> kaj komparu kun la valoro supre antaŭ ol fliki —
-        malĝusta ROM produktas sensencaĵon sen averto.</span>
-      <span class="en">IPS does not validate the base ROM. Check your file with
-        <code>sha1sum</code> and compare it to the value above before patching — the
-        wrong ROM silently produces garbage.</span>
+    <p class="center" style="color:var(--muted);font-size:0.9rem;margin-top:18px;">
+      <span class="eo">Pliaj tradukoj estas planataj.</span>
+      <span class="en">More translations are planned.</span>
     </p>
   </section>
 
   <footer>
     <p>
-      <span class="eo">Neoficiala projekto de fanoj. Ne rilata al Nintendo,
-        Game Freak, aŭ The Pokémon Company.</span>
-      <span class="en">Unofficial fan project. Not affiliated with Nintendo,
-        Game Freak, or The Pokémon Company.</span>
-      Pokémon™ <span class="eo">estas varmarko de siaj respektivaj posedantoj.</span><span class="en">is a trademark of its respective owners.</span>
+      <span class="eo">Neoficialaj fan-projektoj. Ne rilataj al la respektivaj
+        eldonistoj aŭ posedantoj de la varmarkoj. Ni disdonas nur tradukajn
+        flikaĵojn, neniam la ludojn mem.</span>
+      <span class="en">Unofficial fan projects. Not affiliated with the respective
+        publishers or trademark owners. We distribute only translation patches,
+        never the games themselves.</span>
     </p>
   </footer>
 
 </div>
-<script>
-  function setLang(l) {
-    document.body.className = 'lang-' + l;
-    document.documentElement.lang = l;
-    document.getElementById('btn-eo').setAttribute('aria-pressed', l === 'eo');
-    document.getElementById('btn-en').setAttribute('aria-pressed', l === 'en');
-    try { localStorage.setItem('lang', l); } catch (e) {}
-  }
-  try {
-    var saved = localStorage.getItem('lang');
-    if (saved === 'en') setLang('en');
-  } catch (e) {}
-</script>
+<script src="assets/site.js"></script>
 </body>
 </html>

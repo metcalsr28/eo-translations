@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="eo">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pokémon en Esperanto — Ruĝa &amp; Blua Versio</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="lang-eo">
+<div class="wrap">
+
+  <div class="langbar">
+    <button id="btn-eo" aria-pressed="true" onclick="setLang('eo')">Esperanto</button>
+    <button id="btn-en" aria-pressed="false" onclick="setLang('en')">English</button>
+  </div>
+
+  <a class="back" href="../">← <span class="eo">Ĉiuj tradukoj</span><span class="en">All translations</span></a>
+
+  <header>
+    <h1>Pokémon en Esperanto</h1>
+    <p class="tagline">
+      <span class="eo">Kompleta traduko, farita rekte el la japana originalo.</span>
+      <span class="en">A complete translation, made directly from the original Japanese.</span>
+    </p>
+  </header>
+
+  <section>
+    <p class="lead">
+      <span class="eo">Alt-kvalita Esperanta traduko de Pokémon Ruĝa kaj Blua
+        Versioj por la originala Game Boy.</span>
+      <span class="en">A high-quality Esperanto translation of Pokémon Red and Blue
+        Versions for the original Game Boy.</span>
+    </p>
+    <p>
+      <span class="eo">La traduko strebas al fideleco al la japana fontteksto —
+        ne nur al re-Esperantigo de la angla lokalizo. Nomoj de Pokémonoj kaj
+        roluloj sekvas la japanajn originalojn, transskribitajn laŭ Esperanta
+        ortografio.</span>
+      <span class="en">The translation aims for fidelity to the Japanese source
+        text — not merely an Esperanto rendering of the English localization.
+        Pokémon and character names follow the Japanese originals, transliterated
+        into Esperanto orthography.</span>
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="eo">Elŝutu la flikaĵojn</span><span class="en">Download the patches</span></h2>
+    <div class="downloads">
+      <div class="card red">
+        <h3>Ruĝa Versio</h3>
+        <p class="sub"><span class="eo">por Pokémon Red</span><span class="en">for Pokémon Red</span></p>
+        <a class="dl" href="pokemon-ruga-versio-esperanto.ips" download>IPS</a>
+        <span class="hash"><b>SHA-1</b> de baza ROM (Red UE):<br>ea9bcae617fdf159b045185467ae58b2e4a48b9a</span>
+      </div>
+      <div class="card blue">
+        <h3>Blua Versio</h3>
+        <p class="sub"><span class="eo">por Pokémon Blue</span><span class="en">for Pokémon Blue</span></p>
+        <a class="dl" href="pokemon-blua-versio-esperanto.ips" download>IPS</a>
+        <span class="hash"><b>SHA-1</b> de baza ROM (Blue UE):<br>d7037c83e1ae5b39bde3c30787637ba1d4c48ce2</span>
+      </div>
+    </div>
+    <p class="note">
+      <span class="eo"><b>Ni disdonas nur la tradukan flikaĵon, ne la ludon mem.</b>
+        Vi mem devas posedi la originalan ludon kaj apliki la flikaĵon al via
+        propra ROM-dosiero. Bonvolu ne pludistribui flikitajn ROM-ojn.</span>
+      <span class="en"><b>We distribute only the translation patch, not the game
+        itself.</b> You must own the original game and apply the patch to your own
+        ROM file. Please do not redistribute patched ROMs.</span>
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="eo">Kiel apliki la flikaĵon</span><span class="en">How to apply the patch</span></h2>
+    <p>
+      <span class="eo">Flikaĵo en IPS-formo estas aplikata al ROM-dosiero per
+        aparta ilo. Jen kelkaj konataj, sendependaj fliki­loj (ne rilataj al ĉi
+        tiu projekto):</span>
+      <span class="en">An IPS patch is applied to a ROM file using a separate
+        tool. Here are some well-known, independent patchers (not affiliated with
+        this project):</span>
+    </p>
+    <ul>
+      <li><a href="https://www.marcrobledo.com/RomPatcher.js/" rel="noopener noreferrer" target="_blank">ROM Patcher JS</a>
+        — <span class="eo">funkcias en la retumilo; nenio estas alŝutata.</span><span class="en">runs in your browser; nothing is uploaded.</span></li>
+      <li><a href="https://github.com/Alcaro/Flips" rel="noopener noreferrer" target="_blank">Floating IPS (Flips)</a>
+        — <span class="eo">senreta ilo por Vindozo/Linukso.</span><span class="en">offline tool for Windows/Linux.</span></li>
+    </ul>
+    <p class="note">
+      <span class="eo">IPS ne kontrolas la bazan ROM-on. Kontrolu vian dosieron
+        per <code>sha1sum</code> kaj komparu kun la valoro supre antaŭ ol fliki —
+        malĝusta ROM produktas sensencaĵon sen averto.</span>
+      <span class="en">IPS does not validate the base ROM. Check your file with
+        <code>sha1sum</code> and compare it to the value above before patching — the
+        wrong ROM silently produces garbage.</span>
+    </p>
+  </section>
+
+  <footer>
+    <p>
+      <span class="eo">Neoficiala projekto de fanoj. Ne rilata al Nintendo,
+        Game Freak, aŭ The Pokémon Company.</span>
+      <span class="en">Unofficial fan project. Not affiliated with Nintendo,
+        Game Freak, or The Pokémon Company.</span>
+      Pokémon™ <span class="eo">estas varmarko de siaj respektivaj posedantoj.</span><span class="en">is a trademark of its respective owners.</span>
+    </p>
+  </footer>
+
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>
